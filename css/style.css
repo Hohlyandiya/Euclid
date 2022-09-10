@@ -1,0 +1,1393 @@
+/*-----FONTS-----*/
+
+@font-face { 
+    font-family: "Montserrat";
+    src:url("../fonts/Montserrat-Medium.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 100
+}
+
+/*-----ALL-----*/
+
+
+*{
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+*:focus{
+    outline: none;
+}
+
+button:hover{
+    transition: 0.6s;
+}
+
+ul{
+    height: 100%;
+    width: 100%;
+    padding: 0;
+}
+
+li{
+    list-style: none;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+}
+
+main{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 75px;
+}
+
+@media (max-width: 1024px) {
+    main{
+        margin: 0 50px;
+    }
+}
+
+@media (max-width: 1024px){
+    main{
+        margin: 0 15px;
+    }
+}
+
+button{
+    cursor: pointer;
+}
+
+/*-----HEADER------*/
+
+    .header{
+        height: 100px;
+        min-width: 100%;
+        box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.1);
+        align-items: center;
+    }
+    
+    .header-container{
+        padding: 0px 75px;
+        height: 100%;
+    }
+    
+    .header-content{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+    }
+    
+    .help-bar{
+        display: flex;
+    }
+    
+    .links-bar{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 793px;
+    }
+
+    .burger{
+        width: 30px;
+        height: 23px;
+        background-image: url('../img/status\ =\ default.svg');
+        display: none;
+    }
+    
+    .logo{
+        background-image: url('../img/Logo.svg');
+        background-repeat: no-repeat;
+        height: 72px;
+        width: 225px;
+    }
+    
+    .nav{
+        width: 708px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-right: 85px;
+    }
+    
+    .nav__item{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 22px;
+        color: #333333;
+        text-decoration: none;
+    }
+    
+    .nav__item:hover{
+        border-bottom: 2px solid #FF9900 ;
+    }
+    
+    .nav__item:focus{
+        outline: 2px solid #FF9900;
+    }
+    
+    .nav__item:active{
+        outline: none;
+        border-bottom: 2px solid #E1670E;
+        color: #E1670E;
+    }
+    
+    .search-bar{
+        display: flex;
+        align-items: center;
+        background: #FFFFFF;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.12);
+        border-radius: 16px;
+        max-width: 539px;
+        max-height: 60px;
+        padding: 16px 13px 16px 32px;
+    }
+    
+    .string-search{
+        border: none;
+        min-width: 412px;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 22px;
+        border-bottom: 2px solid transparent;
+        background: transparent;
+        transition: .4s cubic-bezier(0, 0.8, 0, 1);
+        z-index: 2;
+        border-bottom: 2px solid #F9F0DA;
+    }
+    
+    .string-search::placeholder{
+        color: #ADADAD;
+    }
+    
+    .string-search:focus {
+      min-width: 412px;
+      z-index: 1;
+      border-bottom: 2px solid #F9F0DA;
+    }
+    
+    .search{
+        background-image: url('../img/status=default.svg');
+        width: 24px;
+        height: 24px;
+        cursor: pointer;
+        border: none;
+        background-color: white;
+        margin: 0px 20px 0px 14px;
+    }
+    
+    .search:hover{
+        background-image: url('../img/status=hover.svg');
+    }
+    
+    .search:focus{
+        outline: 2px solid #FF9900;
+    }
+    
+    .close{
+        overflow:hidden;
+        background-image: url('../img/status\ =\ default\ \(1\).svg');
+        width: 24px;
+        height: 24px;
+        cursor: pointer;
+        border: none;
+        background-color: white;
+    }
+    
+    .close:hover{
+        background-image: url('../img/status\ =\ hover\ \(1\).svg');
+    }
+    
+    .close:focus{
+        outline: 2px solid #FF9900;
+    }
+    
+    .close:active{
+        background-image: url('../img/status\ =\ active\ \(2\).svg');
+        outline: none;
+    }
+
+    /*-----swiper-----*/
+    
+    .slider-container{
+        position: relative;
+        min-height: 620px;
+        max-width: 100%;
+        margin-bottom: 100px;
+    }
+    
+    .list-slide{
+        display: flex;
+        min-width: 100%;
+    }
+    
+    .swiper{
+        min-height: 620px;
+        min-width: 100%;
+    }
+    
+    .slide-angle{
+        background-image: url('../img/low-angle-photo-of-balconies-2462015\ 1.jpg');
+        min-height: 620px;
+        width: 100%;
+        background-size: cover;
+    }
+    
+    .slide-brown{
+        background-image: url('../img/brown-and-blue-glass-building-2093076\ 2.jpg');
+        min-height: 620px;
+        width: 100%;
+        background-size: cover;
+    }
+    
+    .slide-apartment{
+        background-image: url('../img/apartment-apartment-building-architecture-building-323705\ 2.jpg');
+        min-height: 620px;
+        width: 100%;
+        background-size: cover;
+    }
+
+    .swiper-button-prev{
+        z-index: 2;
+    }
+    
+    .slider-info{
+        height: 420 px;
+        width: 837px;
+        position: absolute;
+        z-index: 1;
+        top: 100px;
+        left: 80px;
+        /*padding: 100px 853px 100px 80px;*/
+    }
+    
+    .slider-info__heading{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 800;
+        font-size: 70px;
+        line-height: 85px;
+        color: #FFFFFF;
+        margin-bottom: 24px;
+    }
+    
+    .slider-info__description{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 29px;
+        color: #FFFFFF;
+        margin-bottom: 90px;
+    }
+    
+    .slider-info__button{
+        display: flex;
+        width: 280px;
+        height: 78px;
+        justify-content: center;
+        align-items: center;
+        background: #FF9900;
+        font-family: 'Montserrat';
+        font-weight: bold;
+        font-size: 23.4581px;
+        line-height: 29px;
+        color: #FFFFFF;
+        border: none;
+    }
+    
+    .slider-info__button:hover{
+        background: #F7B045;
+    }
+    
+    .slider-info__button:focus{
+        background: #F7B045;
+    }
+    
+    .slider-info__button:active{
+        background: #E1670E;
+    }
+    
+    /*-----ABOUT-US-----*/
+    
+    .about-us{
+        margin-bottom: 100px;
+    }
+    
+    .about-us-description-container{
+        margin: 0 535px 50px 0;
+    }
+    
+    .about-us-description-content{
+        min-height: 271px;
+        min-width: 1235px;
+    }
+    
+    .heading-section{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 48px;
+        line-height: 59px;
+        color: #333333;
+        margin-bottom: 20px;
+    }
+    
+    .about-us-description{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 32px;
+        color: #333333;
+    }
+    
+    .about-us-detail-content{
+        display: flex;
+        align-items: center;
+    }
+    
+    .card-detail-content{
+        min-width: 868px;
+        min-height: 622px;
+    }
+    
+    .card-background-img{
+        background-image: url('../img/Rectangle\ 2.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-width: 100%;
+        min-height: 622px;
+        display: flex;
+        align-items:flex-end;
+    }
+    
+    .detail-container{
+        min-width: 100%;
+        min-height: 146px;
+        background: rgba(0, 0, 0, 0.5);
+    }
+    
+    .detail-content{
+        padding: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .card-description__text{
+        width: 454px;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 32px;
+        color: #FFFFFF;
+    }
+    
+    .button-detail{
+        background: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 19px 38px;
+        width: 175px;
+        height: 60px;
+        border: 3px solid #FF9900;
+        box-sizing: border-box;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 20px;
+        text-align: center;
+        color: #FFFFFF;
+    }
+    
+    .button-detail:hover{
+        background: #FF9900;
+    }
+    
+    .button-detail:focus{
+        background: #FF9900;
+    }
+    
+    .button-detail:active{
+        background: #E1670E;
+        border: none;
+    }
+    
+    .about-us-accommodation{
+        min-width: 849px;
+        margin-left: 32px;
+        min-height: 622px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .card-container{
+        min-width: 100%;
+        min-height: 295px;
+        padding: 65px 118px 65px 60px;
+        border: 1px solid #CACACA;
+        box-sizing: border-box;
+    }
+    
+    .card-content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .card-svg{
+        min-width: 190px;
+        min-height: 165px;
+        background-size: cover;
+    }
+    
+    .svg-box{
+        background-image: url('../img/Frame\ 16.svg');
+    }
+    
+    .svg-gear{
+        background-image: url('../img/Frame\ 12.svg');
+    }
+    
+    .card-detail{
+        min-height: 165px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .card-title{
+        max-width: 452px;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 29px;
+        color: #333333;
+        margin-bottom: 8px;
+    }
+    
+    .card-description{
+        max-width: 450px;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 32px;
+        color: #333333;
+    }
+    
+    /*-----how-we-are-working-----*/
+    
+    .how-we-are-working{
+        margin-bottom: 100px;
+    }
+    
+    .step{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 22px;
+        color: #333333;
+        text-decoration: none;
+        margin-left: 86px;
+        border: none;
+        background: none;
+    }
+    
+    .step:hover{
+        color: #FF9900;
+    }
+    
+    .step:focus{
+        outline: 2px solid #FF9900;
+    }
+    
+    .step:active{
+        
+        outline: none;
+        color: #E1670E;
+    }
+    
+    .step:first-child{
+        margin-left: 0px;
+    }
+    
+    .how-we-are-working-container{
+        margin-top: 45px;
+    }
+    
+    .how-we-are-working-content{
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+    }
+    
+    .how-we-are-working-img{
+        background-size: 100%;
+        min-width: 870px;
+        min-height: 460px;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .img_1{
+        background-image: url('../img/img_1.jpg');
+    }
+
+    .img_2{
+        background-image: url('../img/img_2.jpg');
+    }
+
+    .img_3{
+        background-image: url('../img/img_3.jpg');
+    }
+
+    .img_4{
+        background-image: url('../img/img_4.jpg');
+    }
+    
+    .how-we-are-working-consultation{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-right: 50px;
+    }
+    
+    .how-we-are-working-description{
+        min-height: 360px;
+        max-width: 758px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .description-heading{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 32px;
+        color: #333333;
+        cursor: pointer;
+    }
+    
+    .description{
+        margin-top: 8px;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 32px;
+        color: #333333;
+    }
+    
+    .how-we-are-working-buttons{
+        margin-top: 50px;
+        display: flex;
+    }
+    
+    .how-we-are-working-detail{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 19px 38px;
+        width: 175px;
+        height: 60px;
+        background: #FF9900;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 20px;
+        text-align: center;
+        color: #FFFFFF;
+        margin-right: 32px;
+        border: none;
+    }
+    
+    .how-we-are-working-detail:hover{
+        background: #F7B045;
+    }
+    
+    .how-we-are-working-detail:focus{
+        background: #F7B045;
+    }
+    
+    .how-we-are-working-detail:active{
+        background: #E1670E;
+    }
+    
+    .how-we-are-working-contract{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 19px 38px;
+        width: 147px;
+        height: 60px;
+        border: 1px solid #333333;
+        box-sizing: border-box;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 20px;
+        text-align: center;
+        color: #333333;
+        background: none;
+    }
+    
+    .how-we-are-working-contract:hover{
+        background: #666666;
+        color: white;
+        border: none;
+    }
+    
+    .how-we-are-working-contract:focus{
+        background: #666666;
+        color: white;
+        border: none;
+    }
+    
+    .how-we-are-working-contract:active{
+        background: #000000;
+        color: white;
+        border: none;
+    }
+    
+    
+    /*-----frequently-asked-questions------*/
+    
+    .frequently-asked-questions{
+        margin-bottom: 100px;
+    }
+    
+    .frequently-asked-questions-container{
+        margin-top: 32px;
+    }
+    
+    .frequently-asked-questions-content{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .frequently-asked-questions-item{
+        min-height: 110px;
+        border-bottom: 1px solid #CACACA;
+        border-top: 1px solid #CACACA;
+        cursor: pointer;
+        margin-bottom: -1px;
+        text-decoration: none;
+    }
+    
+    .frequently-asked-questions-item:hover{
+        border-top: 1px solid #FF9900;
+        border-bottom: 1px solid #FF9900;
+        z-index: 1;
+        transition: 0.4s;
+    }
+    
+    .frequently-asked-questions-item:hover > .ac-header > .description-heading{
+        color: #FF9900;
+        transition: 0.4s;
+    }
+    
+    .frequently-asked-questions-item:hover > .ac-header > .description-heading > .frequently-asked-questions-detail{
+        background-image: url('../img/+х\ \(1\).svg');
+        transition: 0.4s;
+    }
+    
+    .frequently-asked-questions-item:focus{
+        border-top: 1px solid #FF9900;
+        border-bottom: 1px solid #FF9900;
+        z-index: 1;
+        transition: 0.4s;
+    }
+    
+    .frequently-asked-questions-item:focus > .ac-header > .description-heading{
+        color: #FF9900;
+        transition: 0.4s;
+    }
+    
+    .frequently-asked-questions-item:focus > .ac-header > .description-heading > .frequently-asked-questions-detail{
+        background-image: url('../img/+х\ \(1\).svg');
+        transition: 0.4s;
+    }
+    
+    .frequently-asked-questions-item:active{
+        border-bottom: 1px solid #CACACA;
+        border-top: 1px solid #CACACA;
+        z-index: 1;
+        transition: 0.4s;
+    }
+    
+    .frequently-asked-questions-item:active > .ac-header > .description-heading{
+        color: #333333;
+        transition: 0.4s;
+    }
+    
+    .frequently-asked-questions-item:active > .ac-header > .description-heading > .frequently-asked-questions-detail{
+        transform: rotate(45deg);
+        background-image: url('../img/+х.svg');
+        transition: 0.4s;
+    }
+    
+    .frequently-asked-questions-detail{
+        background-image: url('../img/+х.svg');
+        background-position: center;
+        height: 50px;
+        width: 50px;
+        cursor: pointer;
+        background-repeat: no-repeat;
+    }
+
+    .accordion-container-2{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-top: 30px;
+    }
+
+    .button-question{
+        height: 50px;
+        width: 100%;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .ac-text{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 32px;
+        color: #333333;
+        margin-bottom: 40px;
+    }
+    
+    /*-----footer-----*/
+    
+    .footer{
+        background: #222222;
+        min-height: 594px;
+    }
+    
+    .footer-container{
+        padding: 50px 50px;
+    }
+    
+    .footer-content{
+        display: flex;
+        align-items: center;
+    }
+    
+    .information-about-the-company{
+        min-width: 252px;
+        margin-right: 350px;
+    }
+    
+    .footer-logo{
+        width: 224px;
+        height: 72px;
+        background-image: url('../img/Logo-footer.svg');
+        background-size: 100%;
+        margin-bottom: 20px;
+        background-repeat: no-repeat;
+    }
+    
+    .links-to-information{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .item-information{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 36px;
+        color: #CACACA;
+        text-decoration: none;
+    }
+    
+    .item-information:hover{
+        color: #FF9900;
+    }
+    
+    .item-information:focus{
+        outline: 2px solid #FF9900;
+    }
+    
+    .item-information:active{
+        color: #E1670E;
+        border: none;
+    }
+    
+    .social-networks{
+        display: flex;
+        align-items: center;
+        margin-top: 90px;
+    }
+    
+    .facebook{
+        background-image: url('../img/social\ media.svg');
+        width: 60px;
+        height: 60px;
+        cursor: pointer;
+        background-color: #222222;
+        border: none;
+    }
+    
+    .facebook:hover{
+        background-image: url('../img/status\ =\ hover.svg');
+    }
+    
+    .facebook:focus{
+        outline: 1px solid #FF9900;
+    }
+    
+    .facebook:active{
+        background-image: url('../img/status\ =\ active.svg');
+        outline: none;
+    }
+    
+    .vk{
+        background-image: url('../img/vk.svg');
+        width: 60px;
+        height: 60px;
+        margin: 0px 25px 0px 25px;
+        cursor: pointer;
+    }
+    
+    .instagram{
+        background-image: url('../img/instagram\ \(1\).svg');
+        width: 60px;
+        height: 60px;
+        cursor: pointer;
+    }
+    
+    .application{
+        margin-right: 236px;
+    }
+    
+    .application-heading{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 48px;
+        line-height: 59px;
+        color: #CACACA;
+        margin-bottom: 25px;
+    }
+    
+    .name{
+        width: 570px;
+        height: 60px;
+        background: #414141;
+        border: none;
+        margin-bottom: 25px;
+        padding: 0px 24px;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 32px;
+    }
+    
+    .name:hover{
+        background: #666666;
+    }
+    
+    .name:focus{
+        background: #666666;
+    }
+    
+    .name:active{
+        color: #FFFFFF;
+    }
+    
+    .mail{
+        width: 570px;
+        height: 60px;
+        background: #414141;
+        border: none;
+        margin-bottom: 25px;
+        padding: 0px 24px;
+    }
+    
+    .mail:hover{
+        background: #666666;
+    }
+    
+    .mail:focus{
+        background: #666666;
+    }
+    
+    .message{
+        width: 570px;
+        height: 150px;
+        background: #414141;
+        border: none;
+        margin-bottom: 32px;
+        padding: 0px 24px;
+    }
+    
+    .message:hover{
+        background: #666666;
+    }
+    
+    .message:focus{
+        background: #666666;
+    }
+    
+    input[type='text']{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 32px;
+        color: #CACACA;
+    }
+    
+    .dispatch{
+        display: flex;
+        align-items: center;
+    }
+    
+    .button-application{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 19px 38px;
+        width: 269px;
+        height: 58px;
+        background: #FF9900;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 20px;
+        text-align: center;
+        color: #FFFFFF;
+        border: none;
+        margin-right: 22px;
+    }
+    
+    .button-application:hover{
+        background: #F7B045;
+    }
+    
+    .button-application:focus{
+        background: #F7B045;
+    }
+    
+    .button-application:active{
+        background: #E1670E;
+    }
+    
+    .checkbox-description{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 15px;
+        line-height: 32px;
+        color: #CACACA;
+    }
+    
+    .footer-description{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 32px;
+        color: #CACACA;
+    }
+    
+    .custom-checkbox{    
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+        right: 917px;
+    }
+    
+    .custom-checkbox+label{
+        display: inline-flex;
+        align-items: center;
+        user-select: none;
+    }
+    
+    .custom-checkbox+label::before {
+        content: '';
+        display: inline-block;
+        width: 14px;
+        height: 14px;
+        flex-shrink: 0;
+        flex-grow: 0;
+        border: 1px solid #CACACA;
+        box-sizing: border-box;
+        margin-right: 4px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 50% 50%;
+        cursor: pointer;
+    }
+    
+    .custom-checkbox:checked+label::before{
+        background-image: url('../img/Rectangle\ 44.svg');
+        background-size: 10px;
+    }
+
+    @media (max-width: 1024px) {
+        .header-container{
+            padding: 0px 50px;
+        }
+
+        .links-bar{
+            display: none;
+        }
+
+        .burger{
+            display: block;
+        }
+
+        .slider-container{
+            min-height: 668px;
+            margin-bottom: 80px;
+        }
+
+        .slider-info{
+            padding: 160px 77px;
+        }
+
+        .slider-info__heading{
+            font-size: 60px;
+            line-height: 73px;
+            margin-bottom: 16px;
+        }
+
+        .slider-info__description{
+            font-size: 20px;
+            line-height: 24px;
+            margin-bottom: 60px;
+        }
+
+        .slide-angle{
+            background-image: url('../img/low-angle-photo-of-balconies-1024.jpg');
+        }
+
+        .about-us-description-container{
+            margin: 0 0 50px 0;
+        }
+        
+        .about-us-description-content{
+            min-height: 263px;
+            min-width: 925px;
+        }
+
+        .about-us-detail-content{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-background-img{
+            min-height: 640px;
+        }
+
+        .card-detail-content{
+            min-width: 924px;
+            min-height: 640px;
+        }
+
+        .about-us-accommodation{
+            min-width: 924px;
+            margin-left: 0px;
+            margin-top: 32px;
+        }
+
+        .how-we-are-working-img{
+            background-image: url('../img/Rectangle\ 1024.jpg');
+            min-width: 437px;
+            min-height: 689px;
+        }
+
+        .description-heading{
+            font-size: 20px;
+        }
+
+        .question{
+            max-width: 756px;
+        }
+
+        .information-about-the-company{
+            margin-right: 133px;
+        }
+
+        .application{
+            margin-right: 0px;
+        }
+
+        .name{
+            width: 540px;
+           
+        }
+
+        .mail{
+            width: 540px;
+        }
+
+        .message{
+            width: 540px;
+        }
+
+        .button-application{
+            width: 240px;
+        }
+
+        .footer-description{
+            display: none;
+        }
+    }
+
+    @media (max-width: 768px) {
+
+        .footer-content{
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: flex-start;
+        }
+
+        .links-to-information{
+            display: none;
+        }
+
+        .footer-logo{
+            margin-bottom: 16px;
+        }
+
+        .social-networks{
+            margin-top: 0px;
+        }
+
+        .slider-container{
+            min-height: 662px;
+            margin-bottom: 80px;
+        }
+
+        .slider-info__heading{
+            font-size: 50px;
+            line-height: 61px;
+            margin-bottom: 16px;
+        }
+
+        .slider-info__description{
+            font-size: 18px;
+            line-height: 22px;
+            margin-bottom: 60px;
+        }
+
+        .slider-info{
+            padding: 160px 40px;
+        }
+
+        .slide-angle{
+            background-image: url('../img/low-angle-photo-of-balconies-768.jpg');
+        }
+
+        .about-us-description-container{
+            margin: 0 0 50px 0;
+        }
+        
+        .about-us-description-content{
+            min-height: 389px;
+            min-width: 668px;
+        }
+
+        .about-us-detail-content{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .detail-container{
+            min-height: 196px;
+        }
+
+        .about-us-accommodation{
+            min-width: 668px;
+            margin-left: 0px;
+            margin-top: 32px;
+            min-height: 502px;
+        }
+
+        .card-container{
+            padding: 35px 46px 35px 40px;
+            min-height: 235px;
+        }
+
+        .card-description__text{
+            width: 366px;
+        }
+
+        .card-svg{
+            min-width: 114px;
+            min-height: 99px;
+        }
+
+        .card-background-img{
+            min-height: 650px;
+            background-image: url('../img/Rectangle\ 768-2.jpg');
+        }
+
+        .card-detail-content{
+            min-width: 668px;
+            min-height: 650px;
+        }
+
+        .detail-content{
+            padding: 34px 40px;
+        }
+
+        .how-we-are-working-content{
+            flex-direction: column-reverse;
+        }
+
+        .how-we-are-working-img{
+            background-image: url('../img/Rectangle\ 768.jpg');
+            min-width: 668px;
+            min-height: 284px;
+            margin-bottom: 38px;
+        }
+
+        .question{
+            max-width: 570px;
+        }
+
+        .application{
+            margin-right: 0px;
+            margin-bottom: 50px;
+        }
+    }
+
+    @media (max-width: 320px){
+        .header-container{
+            padding: 0px 15px;
+        }
+        
+        .logo{
+            background-image: url('../img/Logo.svg');
+            background-repeat: no-repeat;
+            height: 35px;
+            width: 110px;
+            background-size: cover;
+        }
+
+        .slider-container{
+            min-height: 308px;
+            margin-bottom: 60px;
+        }
+
+        .slider-info__heading{
+            font-size: 20px;
+            line-height: 24px;
+            margin-bottom: 6px;
+            text-align: center;
+        }
+
+        .slider-info__description{
+            font-size: 12px;
+            line-height: 15px;
+            margin-bottom: 32px;
+            text-align: center;
+        }
+
+        .slider-info{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 60px 21px;
+        }
+
+        .slide-angle{
+            background-image: url('../img/low-angle-photo-of-balconies-320.jpg');
+        }
+
+        .slider-info__button{
+            width: 162px;
+            height: 40px;
+            font-size: 12px;
+            line-height: 15px;
+        }
+
+        .heading-section{
+            font-size: 24px;
+            line-height: 29px;
+        }
+
+        .about-us-description{
+            font-size: 14px;
+            line-height: 28px;
+        }
+
+        .about-us-description-content{
+            min-height: 678px;
+            min-width: 290px;
+        }
+
+        .card-background-img{
+            min-height: 200px;
+            min-width: 290px;
+            background-image: url('../img/Rectangle\ 320.jpg');
+            background-size: cover;
+            display: none;
+        }
+
+        .about-us-accommodation{
+            min-width: 290px;
+            margin-left: 0px;
+            margin-top: 32px;
+        }
+
+        .card-container{
+            padding: 0px;
+            border: none;
+            min-height: 249px;
+        }
+
+        .card-content{
+            align-items: flex-start;
+            flex-direction: column;
+        }
+
+        .card-svg{
+            min-width: 64px;
+            min-height: 49px;
+            margin-bottom: 12px;
+        }
+
+        .card-title{
+            font-size: 18px;
+            line-height: 22px;
+        }
+        
+        .card-description{
+            font-size: 14px;
+            line-height: 28px;
+        }
+    }
